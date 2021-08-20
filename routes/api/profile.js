@@ -274,4 +274,7 @@ router.post('/' , passport.authenticate('jwt' , { session : false }) , (req, res
     });
 });
 
- module.exports = router ;       
+ module.exports = router ; 
+ 
+ console.log("success");
+
