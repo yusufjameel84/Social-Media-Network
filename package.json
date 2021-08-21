@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server.js"
   },
-  "author": "Brad Traversy",
+  "author": "Yusuf",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
