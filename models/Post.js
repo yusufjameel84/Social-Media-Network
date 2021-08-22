@@ -1,57 +1,56 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-//Create Schema 
+// Create Schema
 const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'user'  
+    ref: 'users'
   },
-  text:{
-    type: String , 
-    required: true 
+  text: {
+    type: String,
+    required: true
   },
-  name : {
-    type: String 
+  name: {
+    type: String
   },
   avatar: {
-    type: String 
+    type: String
   },
-  //everyone that likes its userid goes into the array
-  likes:[
+  likes: [
     {
-      user:{
+      user: {
         type: Schema.Types.ObjectId,
-        ref: 'user'    
+        ref: 'users'
       }
     }
   ],
-  Comments: [
+  comments: [
     {
-      user:{
+      user: {
         type: Schema.Types.ObjectId,
-        ref: 'user'    
+        ref: 'users'
       },
       text: {
-        type:String,
-        required:true  
+        type: String,
+        required: true
       },
-      name : {
-        type: String 
+      name: {
+        type: String
       },
       avatar: {
-        type: String 
+        type: String
       },
       date: {
-        type:Date , 
-        default : Date.now 
+        type: Date,
+        default: Date.now
       }
     }
   ],
   date: {
-    type:Date , 
-    default : Date.now 
+    type: Date,
+    default: Date.now
   }
 });
 
-module.exports = Post = mongoose.model('post',PostSchema);
+module.exports = Post = mongoose.model('post', PostSchema);
